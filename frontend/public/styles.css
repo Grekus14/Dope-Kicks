@@ -1,0 +1,639 @@
+html {
+	height: 100%;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: "Montserrat", sans-serif;
+	background-color: #f3f3f3;
+	font-size: 1.3rem;
+	color: #26262a;
+	font-weight: 400;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.hide-mobile {
+	display: none;
+}
+
+/* Navbar */
+
+nav {
+	background-color: #424651;
+	display: flex;
+	justify-content: space-between;
+	padding: 1.7rem;
+}
+
+.logo img {
+	width: 180px;
+}
+
+.navigation img {
+	width: 30px;
+	margin-top: 7px;
+}
+
+/* Main Content */
+
+.content {
+	padding: 1rem;
+	margin: 0;
+	background-color: #f3f3f300;
+}
+
+.gradient-background {
+	background-image: linear-gradient(65deg, #ffd3b6 62%, #f67280);
+	position: absolute;
+	width: 100%;
+	height: 150rem;
+	z-index: -1;
+	margin-left: -1rem;
+	margin-top: -1rem;
+}
+
+.fadeout-background {
+	background-image: linear-gradient(rgba(243, 243, 243, 0) 10%, #f3f3f3 25%);
+	position: absolute;
+	width: 100%;
+	height: 150rem;
+	z-index: -1;
+	margin-left: -1rem;
+	margin-top: -1rem;
+}
+
+.cta {
+	font-family: "Playfair Display SC", serif;
+	font-size: 300%;
+	text-align: center;
+	color: white;
+	margin: 5rem auto 7rem;
+	font-weight: bold;
+}
+
+/* Products */
+
+.products {
+	background-color: #f3f3f3;
+	padding: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin-bottom: 4rem;
+}
+
+.product {
+	background-color: #f5f5f5;
+	flex-basis: 40%;
+	padding: 3%;
+	margin: 3% 0;
+	-webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.product-name {
+	font-size: 1.7rem;
+	margin: 2rem auto 0.7rem;
+}
+
+.product-price {
+	color: #7d7d7d;
+	font-size: 1.4rem;
+	margin: 0 auto 0.6rem;
+}
+
+.product img {
+	width: 100%;
+	height: 10rem;
+	object-fit: cover;
+	position: relative;
+}
+
+.product div {
+	text-align: left;
+}
+
+/* Footer */
+
+footer {
+	background-color: #424651;
+	padding: 5rem 2rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: auto;
+}
+
+.footer-logo {
+	width: 180px;
+}
+
+.copyright-text {
+	position: relative;
+	right: 0.5rem;
+	font-size: 0.9rem;
+	color: white;
+	text-align: center;
+}
+
+.legal-text {
+	text-align: center;
+	color: #bdbec2;
+	text-decoration: underline;
+}
+
+.legal-text li {
+	margin: 1rem auto;
+}
+
+/*############################ Product Page ############################*/
+
+.product-page {
+	text-align: center;
+	background-color: #f5f5f5;
+}
+
+.product-image-container {
+	margin: 1rem auto 6rem;
+}
+
+.product-image-container img {
+	width: 40rem;
+	height: 25rem;
+	object-fit: cover;
+}
+
+.main-product-container {
+	background-color: #f5f5f5;
+}
+
+.main-product-content h2 {
+	font-weight: 400;
+	font-size: 3rem;
+	margin-bottom: 1.2rem;
+}
+
+.rating {
+	width: 15rem;
+	margin: 1rem auto;
+}
+
+.description {
+	width: 70%;
+	margin: 1rem auto;
+	color: #707070;
+	font-size: 2rem;
+	margin-bottom: 4rem;
+}
+
+.price {
+	font-size: 3rem;
+}
+
+.buy-button {
+	background-color: #f67280;
+	margin-bottom: 7rem;
+	border: none;
+	font-size: 2.3rem;
+	color: white;
+	font-weight: 700;
+	padding: 1.5rem 5rem;
+	border-radius: 4rem;
+}
+
+/*############################ Order History ############################*/
+
+/* .order-history-container {
+	border-top: #ff6d4e 1px solid;
+	background-color: white;
+	width: 70rem;
+	height: 25rem;
+	margin: 0 auto;
+	-webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+} */
+
+.order-history-title {
+	margin: 3rem auto;
+}
+
+.order-history-container {
+	border-top: #ff6d4e 1px solid;
+	background-color: white;
+	width: 100%;
+	margin-bottom: 0;
+	-webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+	text-align: left;
+}
+
+.order {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: auto;
+	padding: 1rem 3rem;
+	border-bottom: 1px #7d7d7d solid;
+}
+
+.order p {
+	color: #7d7d7d;
+	flex-basis: 20%;
+}
+
+.order :nth-child(1),
+.order :nth-child(2) {
+	font-weight: 700;
+	flex-basis: 40%;
+	font-weight: bold;
+	color: #26262a;
+}
+
+.order :nth-child(2) {
+	text-align: right;
+}
+
+.order :nth-child(5) {
+	text-align: right;
+}
+
+.order-list-container p {
+	font-size: 1rem;
+	flex-basis: 30%;
+}
+
+.order-list-container :last-child {
+	border-bottom: none;
+}
+
+/*############################ Login Page ############################*/
+
+.login-container {
+	background-color: white;
+	-webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
+	width: 75%;
+	margin: 10rem auto;
+	display: flex;
+	padding: 4rem 2rem;
+	border-radius: 3rem;
+	text-align: center;
+}
+
+.main-panel {
+	text-align: center;
+	margin: auto;
+}
+
+.login-logo {
+	width: 12rem;
+	margin: 1.5rem auto 0;
+}
+
+.main-panel h1 {
+	font-size: 3.4rem;
+	font-weight: 800;
+	margin: 0 auto 4rem;
+}
+
+.main-panel input {
+	border: none;
+	background-color: #f3f3f3;
+	border-radius: 3rem;
+	padding: 0.7rem 2rem;
+	width: 14rem;
+	margin: 1rem auto;
+	font-size: 1.4rem;
+}
+
+.main-panel input::placeholder {
+	color: #bbbbbb;
+}
+
+.main-panel input:focus {
+	outline: none;
+}
+
+.switch-login a,
+p {
+	margin: 0;
+	color: #7d7d7d;
+	font-size: 1rem;
+}
+
+.switch-login {
+	margin: 2rem auto;
+}
+
+.main-panel form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.main-button {
+	border: none;
+	border-radius: 3rem;
+	background-image: linear-gradient(100deg, #ffd3b6, #f67280);
+	font-weight: 700;
+	font-size: 1.6rem;
+	padding: 0.9rem 2.7rem;
+	color: white;
+	margin: 4rem auto 2rem;
+}
+
+.main-button:focus {
+	outline: none;
+}
+
+@media only screen and (min-width: 800px) {
+	.hide-mobile {
+		display: block;
+	}
+
+	.hide-desktop {
+		display: none;
+	}
+
+	/* Nav Bar */
+
+	.nav-items {
+		display: flex;
+		color: white;
+		font-size: 1.2rem;
+		padding: 0;
+		margin: 0.4rem 0 0;
+	}
+
+	.nav-items li {
+		margin: 0 3rem;
+	}
+
+	nav {
+		padding: 1.3rem 2.5rem;
+	}
+
+	/* Main Content */
+
+	.main-container {
+		width: 93%;
+		margin: auto;
+	}
+
+	.content {
+		text-align: center;
+	}
+
+	.gradient-background {
+		background-image: linear-gradient(65deg, #ffd3b6 45%, #f67280 80%);
+		height: 50rem;
+	}
+
+	.fadeout-background {
+		background-image: linear-gradient(rgba(243, 243, 243, 0) 15%, #f3f3f3 50%);
+		height: 60rem;
+	}
+
+	.cta {
+		font-size: 3rem;
+	}
+
+	/* Products */
+
+	.products {
+		padding: 1rem 0 0;
+	}
+
+	.product {
+		flex-basis: 16%;
+		margin: 2% 0;
+	}
+
+	.product-name {
+		font-size: 1.3rem;
+	}
+
+	.product-price {
+		font-size: 1.1rem;
+		margin-bottom: 0;
+	}
+
+	/* Footer */
+
+	footer {
+		display: flex;
+		justify-content: space-between;
+		padding: 2rem 5rem;
+	}
+
+	.legal-text {
+		display: flex;
+		font-size: 1rem;
+		padding: 0;
+		margin: auto 9rem;
+		width: 35%;
+	}
+
+	/*############################ Product Page ############################*/
+
+	.main-product-content {
+		display: flex;
+		padding-top: 1rem;
+	}
+
+	.product-image-container {
+		flex: 1;
+		margin-left: 4rem;
+	}
+
+	.main-product-content h2 {
+		font-size: 2.5rem;
+	}
+
+	.product-details {
+		flex: 1;
+		text-align: left;
+		margin: 2rem 4.5rem 0 3rem;
+	}
+
+	.description {
+		text-align: left;
+		width: 100%;
+		font-size: 1.3rem;
+		margin: 2rem 0 3rem;
+	}
+
+	.product-details div {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		margin-top: 0;
+	}
+
+	.rating {
+		margin: 0;
+	}
+
+	.price {
+		font-size: 1.6rem;
+	}
+
+	.buy-button {
+		margin-bottom: 0;
+		margin-right: 5rem;
+		margin-left: 4rem;
+		font-size: 1.4rem;
+		padding: 1rem 4rem;
+	}
+
+	/*############################ Order History ############################*/
+
+	.order {
+		text-align: left;
+		padding: 1rem 4rem;
+	}
+
+	.order-history-container {
+		width: 90%;
+		margin: auto;
+		margin-bottom: 6rem;
+	}
+
+	.order :nth-child(1) {
+		order: 1;
+		flex-basis: 30%;
+	}
+
+	.order :nth-child(2) {
+		flex-basis: 25%;
+		order: 5;
+	}
+
+	.order :nth-child(3) {
+		order: 2;
+	}
+
+	.order :nth-child(4) {
+		order: 3;
+		flex-basis: 17%;
+	}
+
+	.order :nth-child(5) {
+		order: 4;
+		flex-basis: 8%;
+	}
+
+	.order p {
+		flex-basis: 20%;
+		text-align: left;
+		color: #26262a;
+	}
+
+	.labels {
+		display: flex;
+		justify-content: space-between;
+		border-bottom: 1px solid #707070;
+		padding: 0.3rem 4rem;
+		font-size: 1rem;
+	}
+
+	.labels :nth-child(1) {
+		flex-basis: 30%;
+	}
+
+	.labels :nth-child(3) {
+		flex-basis: 17%;
+	}
+
+	.labels :nth-child(4) {
+		flex-basis: 8%;
+		position: relative;
+		left: 2.2rem;
+	}
+
+	.labels :nth-child(5) {
+		text-align: right;
+		position: relative;
+		flex-basis: 25%;
+		right: 0;
+	}
+
+	.labels h2 {
+		flex-basis: 20%;
+	}
+
+	/*############################ Login Page ############################*/
+
+	.login-container {
+		justify-content: space-between;
+		padding: 0;
+		width: 53rem;
+		margin: 3rem auto 3rem;
+	}
+
+	.login-logo {
+		width: 9rem;
+		margin: 3rem auto 0;
+	}
+
+	.main-panel h1 {
+		font-size: 2.5rem;
+		margin: 0rem auto 2rem;
+	}
+
+	.main-panel input {
+		font-size: 1.1rem;
+	}
+
+	.main-button {
+		margin: 2.5rem auto 4rem;
+		background-image: none;
+		font-size: 1.2rem;
+		background-color: #f67280;
+	}
+
+	main-button::
+
+	.left-panel {
+		background-image: linear-gradient(60deg, #ffd3b6 10%, #f67280);
+		margin: 0;
+		border-radius: 3rem 0 0 3rem;
+		color: white;
+		padding: 4rem 4rem;
+	}
+
+	.left-panel p {
+		font-size: 0.8rem;
+	}
+
+	.left-panel h1 {
+		font-size: 2.5rem;
+	}
+
+	.left-panel h2 {
+		font-weight: 400;
+		font-size: 1.2rem;
+		margin: 4rem auto 5rem;
+	}
+
+	.secondary-button {
+		background-color: #ffffff00;
+		border: 3px solid white;
+		border-radius: 3rem;
+		font-size: 1.3rem;
+		padding: 0.6rem 2.5rem;
+		color: white;
+		margin-top: 1rem;
+	}
+
+	.secondary-button:focus {
+		outline: none;
+	}
+
+	.left-panel div p {
+		color: white;
+	}
+}

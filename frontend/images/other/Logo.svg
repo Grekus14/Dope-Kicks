@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="447.815" height="82.927" viewBox="0 0 447.815 82.927">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        font-size: 65px;
+        font-family: Montserrat-SemiBold, Montserrat;
+        font-weight: 600;
+      }
+
+      .cls-2 {
+        fill: #ff6d4e;
+      }
+
+      .cls-3 {
+        fill: #ffc56d;
+      }
+
+      .cls-4 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="Logo" transform="translate(0.055)">
+    <text id="Dope_Kicks" data-name="Dope Kicks" class="cls-1" transform="translate(-0.055 64.014)"><tspan x="0" y="0">Dope Kicks</tspan></text>
+    <rect id="Rectangle_8" data-name="Rectangle 8" class="cls-2" width="12.744" height="59.474" rx="6.372" transform="translate(434.696 0) rotate(45)"/>
+    <rect id="Rectangle_9" data-name="Rectangle 9" class="cls-3" width="12.744" height="59.474" rx="6.372" transform="translate(434.696 31.861) rotate(45)"/>
+    <path id="Path_14" data-name="Path 14" class="cls-4" d="M401.6,80.55c42.161,0,39.659.125,39.659.125s6.266-.87,6.5-7.31h0l-3.873-15.032L439.54,41.464Z"/>
+  </g>
+</svg>
