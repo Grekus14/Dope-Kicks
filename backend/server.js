@@ -11,8 +11,9 @@ require("dotenv").config();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use(
 	session({
 		secret: process.env.SESSION_SECRET,
@@ -36,13 +37,21 @@ app.use("/", mainRoutes);
 app.use("/user/", userRoutes);
 app.use("/orders/", orderRoutes);
 
-// app.get("/profile", (req, res) => {
-// 	if (req.session.authenticated) {
-// 		res.send("Welcome aboard, captain. All systems online.");
-// 	} else {
-// 		res.send("Access denied.");
-// 	}
-// });
+app.get("/profile", (req, res) => {
+	if (req.session.authenticated) {
+		res.send("Welcome aboard, captain. All systems online.");
+	} else {
+		res.send("Access denied.");
+	}
+});
+
+app.post("/profile", (req, res) => {
+	if (req.session.authenticated) {
+		res.send("Welcome aboard, captain. All systems online.");
+	} else {
+		res.send("Access denied.");
+	}
+});
 
 app.listen(5000, () => {
 	console.log("Server running on port 5000");

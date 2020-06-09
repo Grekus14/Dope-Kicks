@@ -9,12 +9,12 @@ router.route("/products").get((req, res) => {
 		.catch(err => res.status(400).send(err));
 });
 
-router.route("/inspect").get((req, res) => {
-	Product.findById(req.body.targetId).then(product => {
+router.route("/inspect/:targetId").get((req, res) => {
+	Product.findById(req.params.targetId).then(product => {
 		if (product) {
 			res.send(product);
 		} else {
-			res.send("No item found.");
+			res.send(false);
 		}
 	});
 });

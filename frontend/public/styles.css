@@ -6,13 +6,33 @@ body {
 	padding: 0;
 	margin: 0;
 	font-family: "Montserrat", sans-serif;
-	background-color: #f3f3f3;
+	background-color: #f5f5f5;
 	font-size: 1.3rem;
 	color: #26262a;
 	font-weight: 400;
 	min-height: 100%;
 	display: flex;
 	flex-direction: column;
+	align-items: stretch;
+}
+
+button,
+.sign-up {
+	cursor: pointer;
+}
+
+button:hover,
+.sign-up:hover {
+	background-color: #ff8b97;
+}
+
+button:active,
+.sign-up:active {
+	background-color: #dd5c69;
+}
+
+#root {
+	position: relative;
 }
 
 ul {
@@ -32,13 +52,67 @@ nav {
 	padding: 1.7rem;
 }
 
+.nav-items a,
+.logout-btn {
+	text-decoration: none;
+	color: white;
+	margin-top: 0;
+	font-size: 1.1rem;
+}
+
+.logout-btn {
+	border: none;
+	background: none;
+}
+
+.logout-btn:hover {
+	outline: none;
+	background: none;
+}
+
 .logo img {
 	width: 180px;
 }
 
-.navigation img {
+.hamburger {
 	width: 30px;
 	margin-top: 7px;
+	cursor: pointer;
+}
+
+.navigation ul {
+	-webkit-box-shadow: 0 0 0 20rem rgba(0, 0, 0, 0.5);
+	position: fixed;
+	width: 70%;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 1.5em 0 0;
+	background-color: #424651;
+	height: 100%;
+	z-index: 10;
+}
+
+.navigation ul li a {
+	padding: 1.5rem 3rem;
+	font-size: 2rem;
+	display: block;
+	background-color: #4e525e;
+}
+
+.navigation ul li a:hover {
+	background-color: #585c68;
+}
+
+.navigation ul li a:active {
+	background-color: rgb(55, 59, 68);
+}
+
+.close-menu {
+	margin: 0 2.5rem 2.2rem auto;
+	width: 1.5rem;
+	display: block;
+	cursor: pointer;
 }
 
 /* Main Content */
@@ -50,7 +124,7 @@ nav {
 }
 
 .gradient-background {
-	background-image: linear-gradient(65deg, #ffd3b6 62%, #f67280);
+	background-image: linear-gradient(65deg, #f7c3a1 62%, #f67280);
 	position: absolute;
 	width: 100%;
 	height: 150rem;
@@ -81,12 +155,16 @@ nav {
 /* Products */
 
 .products {
-	background-color: #f3f3f3;
+	background-color: #f5f5f5;
 	padding: 1rem;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 	margin-bottom: 4rem;
+}
+
+.product-link {
+	text-decoration: none;
 }
 
 .product {
@@ -100,6 +178,7 @@ nav {
 .product-name {
 	font-size: 1.7rem;
 	margin: 2rem auto 0.7rem;
+	color: #26262a;
 }
 
 .product-price {
@@ -128,6 +207,7 @@ footer {
 	justify-content: space-around;
 	align-items: center;
 	margin-top: auto;
+	margin-bottom: 0;
 }
 
 .footer-logo {
@@ -169,18 +249,18 @@ footer {
 	object-fit: cover;
 }
 
-.main-product-container {
-	background-color: #f5f5f5;
+.main-product-content {
+	text-align: center;
 }
 
 .main-product-content h2 {
 	font-weight: 400;
-	font-size: 3rem;
+	font-size: 3.5rem;
 	margin-bottom: 1.2rem;
 }
 
 .rating {
-	width: 15rem;
+	width: 16rem;
 	margin: 1rem auto;
 }
 
@@ -194,6 +274,8 @@ footer {
 
 .price {
 	font-size: 3rem;
+	margin: 7rem auto 3rem;
+	color: #26262a;
 }
 
 .buy-button {
@@ -205,6 +287,18 @@ footer {
 	font-weight: 700;
 	padding: 1.5rem 5rem;
 	border-radius: 4rem;
+}
+
+.back-button {
+	position: absolute;
+	top: 1.5rem;
+	left: 2rem;
+	font-weight: 700;
+	color: #26262a;
+	text-decoration: none;
+	border: 3px solid #26262a;
+	padding: 0.3rem 1rem;
+	border-radius: 2rem;
 }
 
 /*############################ Order History ############################*/
@@ -220,6 +314,7 @@ footer {
 
 .order-history-title {
 	margin: 3rem auto;
+	text-align: center;
 }
 
 .order-history-container {
@@ -229,6 +324,7 @@ footer {
 	margin-bottom: 0;
 	-webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
 	text-align: left;
+	margin-bottom: 50%;
 }
 
 .order {
@@ -243,6 +339,7 @@ footer {
 .order p {
 	color: #7d7d7d;
 	flex-basis: 20%;
+	margin: 0.7rem auto;
 }
 
 .order :nth-child(1),
@@ -274,7 +371,7 @@ footer {
 
 .login-container {
 	background-color: white;
-	-webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.12);
 	width: 75%;
 	margin: 10rem auto;
 	display: flex;
@@ -291,6 +388,13 @@ footer {
 .login-logo {
 	width: 12rem;
 	margin: 1.5rem auto 0;
+}
+
+.forgot-password {
+	color: #a7a7a7;
+	font-size: 0.9rem;
+	margin: 1rem auto 0;
+	display: block;
 }
 
 .main-panel h1 {
@@ -310,7 +414,7 @@ footer {
 }
 
 .main-panel input::placeholder {
-	color: #bbbbbb;
+	color: #a7a7a7;
 }
 
 .main-panel input:focus {
@@ -364,12 +468,40 @@ p {
 		display: flex;
 		color: white;
 		font-size: 1.2rem;
+		align-items: center;
 		padding: 0;
-		margin: 0.4rem 0 0;
+		margin: 0.6rem 0 0;
 	}
 
-	.nav-items li {
-		margin: 0 3rem;
+	.navigation ul {
+		padding: 0;
+		box-shadow: none;
+		position: static;
+		width: auto;
+		height: auto;
+		background: none;
+	}
+
+	.logout-btn {
+		cursor: pointer;
+	}
+
+	.navigation ul li a {
+		margin: 0 4rem;
+		padding: 0;
+		font-size: 1.3rem;
+		background: none;
+	}
+
+	.logo {
+		margin-top: 0.2rem;
+	}
+
+	#sign-up {
+		background-image: linear-gradient(deg, #f7c3a1, #f67280);
+		border-radius: 2rem;
+		padding: 0.5rem 1.2rem;
+		-webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
 	}
 
 	nav {
@@ -388,12 +520,12 @@ p {
 	}
 
 	.gradient-background {
-		background-image: linear-gradient(65deg, #ffd3b6 45%, #f67280 80%);
+		background-image: linear-gradient(65deg, #f7c3a1 45%, #f67280 80%);
 		height: 50rem;
 	}
 
 	.fadeout-background {
-		background-image: linear-gradient(rgba(243, 243, 243, 0) 15%, #f3f3f3 50%);
+		background-image: linear-gradient(rgba(243, 243, 243, 0) 15%, #f5f5f5 40%);
 		height: 60rem;
 	}
 
@@ -475,18 +607,25 @@ p {
 
 	.rating {
 		margin: 0;
+		width: 13rem;
 	}
 
 	.price {
-		font-size: 1.6rem;
+		font-size: 1.8rem;
+		color: #26262a;
+		margin: auto 1rem auto 0;
 	}
 
 	.buy-button {
 		margin-bottom: 0;
 		margin-right: 5rem;
-		margin-left: 4rem;
+		margin-left: 1rem;
 		font-size: 1.4rem;
 		padding: 1rem 4rem;
+	}
+
+	.buy-button:focus {
+		outline: none;
 	}
 
 	/*############################ Order History ############################*/
@@ -499,7 +638,7 @@ p {
 	.order-history-container {
 		width: 90%;
 		margin: auto;
-		margin-bottom: 6rem;
+		margin-bottom: 12rem;
 	}
 
 	.order :nth-child(1) {
@@ -579,6 +718,10 @@ p {
 		margin: 3rem auto 0;
 	}
 
+	.back-button:hover {
+		background-color: #00000011;
+	}
+
 	.main-panel h1 {
 		font-size: 2.5rem;
 		margin: 0rem auto 2rem;
@@ -596,7 +739,7 @@ p {
 	}
 
 	.left-panel {
-		background-image: linear-gradient(60deg, #ffd3b6 10%, #f67280);
+		background-image: linear-gradient(60deg, #ffd3b6 -20%, #f67280);
 		margin: 0;
 		border-radius: 3rem 0 0 3rem;
 		color: white;
@@ -614,17 +757,25 @@ p {
 	.left-panel h2 {
 		font-weight: 400;
 		font-size: 1.2rem;
-		margin: 4rem auto 5rem;
+		margin: 4rem auto 4rem;
 	}
 
 	.secondary-button {
-		background-color: #ffffff00;
+		background-color: #00000009;
 		border: 3px solid white;
 		border-radius: 3rem;
-		font-size: 1.3rem;
+		font-size: 1.2rem;
 		padding: 0.6rem 2.5rem;
 		color: white;
+		font-weight: 700;
 		margin-top: 1rem;
+	}
+
+	.secondary-button:hover {
+		background-color: #ffffff15;
+	}
+	.secondary-button:active {
+		background-color: #00000011;
 	}
 
 	.secondary-button:focus {
@@ -633,5 +784,9 @@ p {
 
 	.left-panel div p {
 		color: #fff;
+	}
+
+	.panel-flip {
+		border-radius: 0 3rem 3rem 0;
 	}
 }

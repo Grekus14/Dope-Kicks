@@ -10,20 +10,24 @@ router.route("/order-history").get((req, res) => {
 });
 
 router.route("/purchase").post((req, res) => {
+	let currentDay = new Date().getDate() + "";
+	let currentMonth = new Date().getMonth() + "";
+	currentDay = currentDay.length < 2 ? "0" + currentDay : currentDay;
+	currentMonth = currentMonth.length < 2 ? "0" + currentMonth : currentMonth;
+
 	if (req.session.authenticated) {
 		let newOrder = new Order({
-			customerName: req.body.buyerUsername,
+			customerName: req.session.currentUsername,
 			productName: req.body.purchasedProduct,
 			productPrice: req.body.purchasedProductPrice,
-			orderDate: new Date()
+			orderDate: `${currentDay}.${currentMonth}.${new Date().getFullYear()} ${new Date().toLocaleTimeString()}`
 		});
-		alert("Thank you for shopping! You can view your order on the Order History page.");
 		newOrder
 			.save()
-			.then(res.status(200).send("Order added to history."))
+			.then(res.status(200).send("Thanks for shopping! Your order will arrive soon."))
 			.catch(err => res.send(err));
 	} else {
-		res.send("You must be logged in to purchase this item.");
+		res.status(401).send("User not logged in.");
 	}
 });
 
