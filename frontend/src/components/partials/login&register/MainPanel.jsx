@@ -69,6 +69,7 @@ function MainPanel(props) {
 			<input
 				value={password}
 				onChange={handlePasswordChange}
+				autocomplete="off"
 				type="password"
 				name="password"
 				placeholder="Password"
