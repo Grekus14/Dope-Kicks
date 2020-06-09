@@ -5,6 +5,7 @@ const session = require("express-session");
 const mainRoutes = require("./routes/productRoutes");
 const userRoutes = require("./routes/userRoutes");
 const orderRoutes = require("./routes/orderRoutes");
+const path = require("path");
 const cors = require("cors");
 
 require("dotenv").config();
@@ -37,21 +38,14 @@ app.use("/", mainRoutes);
 app.use("/user/", userRoutes);
 app.use("/orders/", orderRoutes);
 
-app.get("/profile", (req, res) => {
-	if (req.session.authenticated) {
-		res.send("Welcome aboard, captain. All systems online.");
-	} else {
-		res.send("Access denied.");
-	}
-});
+// Serve static assets if in production
+if (process.env.NODE_ENV === "production") {
+	app.use(express.static("frontend/build"));
 
-app.post("/profile", (req, res) => {
-	if (req.session.authenticated) {
-		res.send("Welcome aboard, captain. All systems online.");
-	} else {
-		res.send("Access denied.");
-	}
-});
+	app.get("*", (req, res) => {
+		res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
+	});
+}
 
 app.listen(5000, () => {
 	console.log("Server running on port 5000");
